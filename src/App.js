@@ -1,18 +1,19 @@
-import './App.css';
-import Banner from './components/Banner';
-import Menu from './components/Menu';
-import Footer from './components/Footer';
-import StudentComponent from './components/StudentComponent';
+import './css/custom.css';  
+
+import HeaderComponent from './components/HeaderComponent';
+import MenuComponent from './components/MenuComponent';
+import FooterComponent from './components/FooterComponent';
 
 function App() {
-  const students = ['ram', 'sita', 'gita'];
-  const users = ['Kumar', 'Kumari', 'Prashon'];
   return (
-    <div>
-        <h1>Student List</h1>
-        {students.map((students, key) => {
-          return <StudentComponent key={key} studentName={students} />
-        })}
+    <div className='container'>
+
+        {/* <h1>Welcome to ReactJS</h1> */}
+
+        <HeaderComponent className="headerCompo" />
+        <MenuComponent />
+        <FooterComponent />
+
     </div>
   );
 }
